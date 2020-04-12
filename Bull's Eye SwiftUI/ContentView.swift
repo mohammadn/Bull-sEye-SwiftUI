@@ -9,8 +9,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var alertIsVissible: Bool = false
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Hello, World!")
+                .fontWeight(.bold)
+                .foregroundColor(Color.green)
+            Button(action: {
+                print("hi")
+                self.alertIsVissible = true
+            }) {
+                Text(/*@START_MENU_TOKEN@*/"Hit Me!"/*@END_MENU_TOKEN@*/)
+            }
+            .alert(isPresented: $alertIsVissible) { () -> Alert in
+                return Alert(title: Text("Hello There!"), message: Text("This is my first pop-up."), dismissButton: .default(Text("Awesome!")))
+            }
+        }
     }
 }
 
