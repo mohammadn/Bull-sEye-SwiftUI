@@ -18,6 +18,7 @@ struct ContentView: View {
                 .foregroundColor(Color.green)
             Button(action: {
                 print("hi")
+                print("Dear Self,")
                 self.alertIsVissible = true
             }) {
                 Text(/*@START_MENU_TOKEN@*/"Hit Me!"/*@END_MENU_TOKEN@*/)
