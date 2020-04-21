@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     
     @State var alertIsVissible: Bool = false
-    @State var knockKnockIsVissible: Bool = false
     
     var body: some View {
         VStack {
@@ -26,20 +25,13 @@ struct ContentView: View {
             .alert(isPresented: $alertIsVissible) { () -> Alert in
                 return Alert(title: Text("Hello There!"), message: Text("This is my first pop-up."), dismissButton: .default(Text("Awesome!")))
             }
-            Button(action: {
-                self.knockKnockIsVissible = true
-            }) {
-                Text("Knock knock!")
-            }
-            .alert(isPresented: $alertIsVissible) { () -> Alert in
-                return Alert(title: Text("Who is there?"), message: Text("It's me."), dismissButton: .default(Text("That was fun!")))
-            }
+        
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().previewLayout(.fixed(width: 896, height: 414))
     }
 }
