@@ -10,9 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var alertIsVissible: Bool = false
-    @State var sliderValue: Double = 50.0
-    @State var targetValue: Int = Int.random(in: 1...100)
+    @State var alertIsVissible = false
+    @State var sliderValue = 50.0
+    @State var targetValue = Int.random(in: 1...100)
     
     var body: some View {
         VStack {
@@ -27,7 +27,7 @@ struct ContentView: View {
             // Slider row
             HStack{
                 Text("1")
-                Slider(value: self.$sliderValue, in: 1...100)
+                Slider(value: $sliderValue, in: 1...100)
                 Text("100")
             }
             Spacer()
@@ -39,10 +39,10 @@ struct ContentView: View {
                 Text(/*@START_MENU_TOKEN@*/"Hit Me!"/*@END_MENU_TOKEN@*/)
             }
             .alert(isPresented: $alertIsVissible) { () -> Alert in
-                let roundedValue: Int = Int((self.sliderValue).rounded())
+                let roundedValue = Int((sliderValue).rounded())
                 return Alert(title: Text("Hello There!"), message: Text(
                     "The slider's value is \(roundedValue).\n" +
-                    "You scored \(self.pointsForCurrentRun()) points this round"
+                    "You scored \(pointsForCurrentRun()) points this round"
                 ), dismissButton: .default(Text("Awesome!")))
             }
             Spacer()
@@ -68,9 +68,9 @@ struct ContentView: View {
     }
     func pointsForCurrentRun() -> Int {
         
-        let roundedValue: Int = Int((self.sliderValue).rounded())
-        let difference: Int = abs(roundedValue - self.targetValue)
-        let awardedPoints: Int = 100 - difference
+        let roundedValue = Int((sliderValue).rounded())
+        let difference = abs(roundedValue - targetValue)
+        let awardedPoints = 100 - difference
         
         return awardedPoints
     }
