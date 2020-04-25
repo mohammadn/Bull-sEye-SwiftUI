@@ -82,12 +82,26 @@ struct ContentView: View {
     }
     
     func pointsForCurrentRun() -> Int {
-        100 - amountOff()
+        let maximumScore = 100
+        let difference = amountOff()
+        let bonus: Int
+        
+        if difference == 0 {
+            bonus = 100
+        } else if difference == 1{
+            bonus = 50
+        } else {
+            bonus = 0
+        }
+        
+        return maximumScore - difference + bonus
     }
     
     func alertTitle() -> String {
+        
         let difference = amountOff()
         let title: String
+        
         if difference == 0 {
             title = "Perfect!"
         } else if difference < 5 {
@@ -97,6 +111,7 @@ struct ContentView: View {
         } else {
             title = "Are you even trying?"
         }
+        
         return title
     }
 }
