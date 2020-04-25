@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113FEAF52454688C001BCCEF /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113FEAF42454688C001BCCEF /* AboutView.swift */; };
 		118B7F442442537000211E06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118B7F432442537000211E06 /* AppDelegate.swift */; };
 		118B7F462442537000211E06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118B7F452442537000211E06 /* SceneDelegate.swift */; };
 		118B7F482442537000211E06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118B7F472442537000211E06 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		113FEAF42454688C001BCCEF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		118B7F402442537000211E06 /* Bull's Eye SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bull's Eye SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		118B7F432442537000211E06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		118B7F452442537000211E06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				118B7F432442537000211E06 /* AppDelegate.swift */,
 				118B7F452442537000211E06 /* SceneDelegate.swift */,
 				118B7F472442537000211E06 /* ContentView.swift */,
+				113FEAF42454688C001BCCEF /* AboutView.swift */,
 				118B7F492442537500211E06 /* Assets.xcassets */,
 				118B7F4E2442537500211E06 /* LaunchScreen.storyboard */,
 				118B7F512442537500211E06 /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113FEAF52454688C001BCCEF /* AboutView.swift in Sources */,
 				118B7F442442537000211E06 /* AppDelegate.swift in Sources */,
 				118B7F462442537000211E06 /* SceneDelegate.swift in Sources */,
 				118B7F482442537000211E06 /* ContentView.swift in Sources */,
